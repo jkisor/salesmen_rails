@@ -1,0 +1,12 @@
+%h1 
+	Locations
+	= link_to 'New', new_location_path, :class => 'btn btn-default'
+	
+- if @locations.count == 0
+	There are no locations.
+- else
+	- @locations.each do |location|
+		.location
+			%h3= link_to(location.name, location) 
+			%p= render 'sales_rep', sales_rep: location.sales_rep
+		

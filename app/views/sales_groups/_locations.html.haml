@@ -1,0 +1,7 @@
+%dt
+	Locations:
+	- if locations.empty?
+		%dd= 'None'
+	- else
+		- locations.each do |loc|
+			%dd= loc.name

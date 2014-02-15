@@ -1,0 +1,7 @@
+%dt
+	Sales Reps:
+	- if sales_reps.empty?
+		%dd= 'None'
+	- else
+		- sales_reps.each do |rep|
+			%dd= rep.full_name

@@ -1,0 +1,9 @@
+= render 'shared/error_messages', object: @sales_rep
+= form_for @sales_rep do |f|
+	- [:first_name, :last_name].each do |attribute|
+		= labeled_text_field_for(attribute, f)
+
+	= labeled_select_for(:sales_group, options(@sales_groups, :id, :id), f)
+	= labeled_select_for(:location, options(@locations, :name, :id), f)
+	
+	= f.submit 'Save', :class => 'btn btn-default'

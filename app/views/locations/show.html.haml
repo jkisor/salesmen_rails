@@ -1,0 +1,14 @@
+%h1
+	= @location.name
+	= link_to 'Edit', edit_location_path(@location.id), :class => 'btn btn-default btn-sm'
+	= link_to 'Delete', @location, method: :delete, :class => 'btn btn-default btn-sm'
+%p
+	.address
+		= @location.address_line_1
+		%br/
+		- unless @location.address_line_2.blank?
+			= @location.address_line_2
+			%br/
+		= @location.city + ', ' + @location.state + ' ' + @location.zip.to_s
+		%br/
+	= render 'sales_rep', sales_rep: @location.sales_rep

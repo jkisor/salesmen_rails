@@ -1,0 +1,13 @@
+%h1 
+	Sales Reps
+	= link_to 'New', new_sales_rep_path, :class => 'btn btn-default'
+
+- if @sales_reps.count == 0
+	There are no sales reps.
+- else
+	- @sales_reps.each do |rep|
+		.sales-rep 
+			%h3
+				= link_to(rep.full_name, rep)
+
+		

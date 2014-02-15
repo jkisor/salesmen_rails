@@ -1,0 +1,15 @@
+%h1 
+	Sales Groups
+	= link_to 'New', new_sales_group_path, :class => 'btn btn-default'
+
+- if @sales_groups.count == 0
+	There are no sales groups.
+- else
+	- @sales_groups.each do |group|
+		.sales-group
+			%h3
+				= link_to("Group ##{group.id}", group)
+			%dl.dl-horizontal
+				= render 'sales_reps', sales_reps: group.sales_reps
+				= render 'locations', locations: group.locations
+								

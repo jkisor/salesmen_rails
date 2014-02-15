@@ -1,0 +1,194 @@
+LocationsController
+  GET new
+    creates new instance of location
+  POST create
+    with valid attributes
+      saves new location to database
+      redirects to location index
+    with invalid attributes
+      does not save submitted location
+      renders the new view
+  GET show
+    finds the requested location
+    renders the show template
+  GET index
+    populates an array of locations
+    renders the index view
+  GET edit
+    finds the requested sales group
+    renders the edit view
+  PUT update
+    with valid attributes
+      finds the requested location
+      changes the location's attributes
+      redirects to the location index
+    with invalid attributes
+      finds the requested location
+      does not save the changes
+      renders the edit view
+    DELETE destroy
+      deletes the location
+      redirects to location index
+
+SalesGroupsController
+  GET new
+    instantiates a new sales group
+    renders the new view
+  POST create
+    with valid attributes
+      saves new sales rep to database
+      redirects to sales rep index
+    with invalid attributes
+      does not save new sales group
+      renders the new view
+  GET show
+    finds the requested sales_group
+    renders the show template
+  GET index
+    populates array of sales groups
+    renders the index view
+  GET edit
+    finds the requested sales group
+    renders the edit view
+  PUT update
+    with valid attributes
+      finds the requested sales rep
+      changes the sales_reps' attributes
+      redirects to the sales group index
+    with invalid attributes
+      finds the requested sales rep
+      does not save the changes
+      renders the edit view
+  DELETE destroy
+    deletes the sales rep
+    redirects to sales rep index
+
+SalesRepsController
+  GET new
+    assigns a new sales rep to @sales_rep
+    renders the new view
+  POST create
+    with valid attributes
+      saves new sales rep to database
+      redirects to sales rep index
+    with invalid attributes
+      does not save new sales rep
+      renders the new view
+  GET show
+    finds the requested sales rep
+    renders the show template
+  GET index
+    populates array of sales rep
+    renders the index view
+  GET edit
+    finds the requested sales rep
+    renders the edit view
+  PUT update
+    with valid attributes
+      finds the requested sales rep
+      changes the sales_reps' attributes
+      redirects to the sales_rep index
+    with invalid attributes
+      finds the requested sales rep
+      does not save the changes
+      renders the edit view
+  DELETE destroy
+    deletes the sales rep
+    redirects to sales rep index
+
+creating a location
+  valid input entered
+  name field left blank
+  address field left blank
+  city field left blank
+  state field left blank
+  zip field left blank
+
+deleting a location
+  succeeds if location exists
+
+updating a location
+  changing name
+  changing address
+  changing city
+  changing state
+  changing zip
+
+viewing locations
+  given no locations
+  many locations
+
+creating sales group
+  valid input entered
+  description field left blank
+
+deleting a sales group
+  succeeds if sales group exists
+
+updating sales group
+  changing the description
+
+viewing sales groups
+  given no sales groups
+  many sales groups
+
+creating sales rep
+  valid input entered
+  name fields left blank
+
+deleting a sales rep
+  succeeds if sales rep exists
+
+updating sales rep
+  changing first and last name
+  changing sales group
+  changing location
+
+viewing sales reps
+  given no sales reps
+  many sales reps
+
+Location
+  should respond to #name
+  should respond to #address_line_1
+  should respond to #address_line_2
+  should respond to #city
+  should respond to #state
+  should respond to #zip
+  should respond to #sales_rep
+  validations
+    invalid without name
+      should be invalid
+    invalid without city
+      should be invalid
+    invalid without state
+      should be invalid
+    invalid without zip
+      should be invalid
+    invalid without address_line_1
+      should be invalid
+
+SalesGroup
+  should respond to #description
+  should respond to #sales_reps
+  should respond to #locations
+  validations
+    invalid without a description
+      should be invalid
+
+SalesRep
+  attributes
+    should respond to #first_name
+    should respond to #last_name
+    should respond to #sales_group
+    should respond to #location_id
+  validations
+    invalid without a first name
+      should be invalid
+    invalid without a first name
+      should be invalid
+  #full_name
+    returns joined first and last name
+
+Finished in 2.59 seconds
+110 examples, 0 failures

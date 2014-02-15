@@ -1,0 +1,4 @@
+= render 'shared/error_messages', object: @sales_group
+= form_for @sales_group do |f|
+	= labeled_text_field_for(:description, f)
+	= f.submit 'Save', :class => 'btn btn-default'

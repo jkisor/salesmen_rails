@@ -1,0 +1,9 @@
+%h1
+	==Group ##{@sales_group.id}
+	= link_to 'Edit', edit_sales_group_path(@sales_group.id), :class => 'btn btn-default btn-sm'
+	= link_to 'Delete', @sales_group, method: :delete, :class => 'btn btn-default btn-sm'
+%dl.dl-horizontal
+	%dt Description:
+	%dd= @sales_group.description
+	= render 'sales_reps', sales_reps: @sales_group.sales_reps
+	= render 'locations', locations: @sales_group.locations

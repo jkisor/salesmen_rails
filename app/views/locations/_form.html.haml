@@ -1,0 +1,5 @@
+= render 'shared/error_messages', object: @location
+= form_for @location do |f|
+	- [:name, :address_line_1, :address_line_2, :city, :state, :zip].each do |attribute|
+		= labeled_text_field_for(attribute, f)
+	= f.submit 'Save', :class => 'btn btn-default'

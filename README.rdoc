@@ -1,28 +1,23 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a sample Ruby on Rails app developed test-first.
 
-Things you may want to cover:
+== Requirements
+Produce a simple web application in a ruby framework of choice (complete with specs/tests/features) that allows the following:
 
-* Ruby version
+* A Sales Group has a unique identifier and description for each Sales Group
+* A Sales Rep has a unique identifier and first and last name for each Sales Rep
+* A Sales Rep can belong to only one Sales Group
 
-* System dependencies
+* A Location has a Name and physical address (Line 1, Line 2, City, State, Zip Code)
+* A Location has one Sales Rep assigned to it
 
-* Configuration
+== Given the above, build the app so that:
 
-* Database creation
+* Sales Groups, Sales Reps, and Locations can be added and updated.
 
-* Database initialization
+* A simple page that can show the above information grouped in the following ways:
 
-* How to run the test suite
+* The list of Sales Groups with each Sales Rep listed under the group
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* A List of Locations with each Sales Rep listed under the Location
